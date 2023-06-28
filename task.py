@@ -32,8 +32,7 @@ def files_rename(dir_path: str, new_name: str = '', count: int = 3,# путь к
             os.rename(os.path.join(dir_path, current_file),
                       os.path.join(dir_path, new_file))
             files_count += 1
-    return f'{files_count} файл(а/ов) переименован(ы) по шаблону ' \
-           f'"old_name[{slice_name[0]}:{slice_name[1]}]{new_name}_{"X" * int(f"{count}")}.{out_extension}"'
+    return f'"old_name[{slice_name[0]}:{slice_name[1]}]{new_name}_{"X" * int(f"{count}")}.{out_extension}"'
 
 
 print(files_rename('begin', new_name='finish', count=5, in_extension='txt',
